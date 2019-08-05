@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 # Create root CA key
-openssl genrsa -out certs/rootCA.key 4096
+openssl genrsa -des3 -out rootCA.key 4096
 
 # Create root CA certificate
 openssl req -x509 -new -nodes -key certs/rootCA.key -sha256 -days 1024  -out certs/rootCA.crt -config rootCA.conf
